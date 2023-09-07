@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- Balises META -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="cOf7fVVTIkG_1wakCRrggw5lqHS07u39YhCIrTLBuns" />
+  <link rel="canonical" href="https://rwa.fr">
+  <!-- Autres balises META -->
+  <meta name="Content-Language" content="fr">
+  <meta name="Description"
+    content="Radio Pop rock généraliste, alliant des titres Pop rock des deux années précédentes et de celle en cours avec de temps à autre, un titre Oldie pouvant remonter jusqu'à 50 ans dans le passé !">
+  <meta name="Keywords"
+    content="Radio, Webradio, Émission, Podcast, Rock, Pop rock, Hit's, Dance, Reggae, Musique, tchat, ">
+  <meta name="Subject" content="Webradio pop rock">
+  <meta name="Copyright" content="© 2022 rwa.fr">
+  <meta name="Author" content="Stephane Henry">
+  <meta name="Publisher" content="Stephane Henry">
+  <meta name="Identifier-Url" content="https://rwa.fr/">
+  <meta name="Reply-To" content="contact@rwa.fr">
+  <meta name="Revisit-After" content="7 days">
+  <meta name="Rating" content="general">
+  <meta name="Distribution" content="global">
+  <meta name="Expires" content="jamais">
+  <meta name="Geography" content="Sainte Foy La Grande">
+  <meta name="Category" content="internet">
+  <meta property="og:type" content="music.song">
+  <meta property="og:title" content="Radio RWA">
+  <meta property="og:url" content="https://rwa.fr/">
+  <meta property="og:image" content="undefined">
+  <meta property="og:description" content="Basée dans la région Aquitaine, elle diffuse une sélection de titres Pop et Rock des deux dernières années et de l'année en cours, tout en incluant occasionnellement des classiques POP et ROCK!">
+  <meta property="og:audio" content="https://manager8.streamradio.fr:1665/stream">
+
+  <!-- ... -->
+
+  <!-- Titre du site web -->
+  <title>Radio RWA</title>
+  <!-- ... -->
+
+  <!-- Favicon dans l'onglet des navigateurs -->
+  <link rel="shortcut icon" href="images/rwa-favicon.png">
+  <!-- ... -->
+
+  <!-- Liens vers les fichiers CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/rwa.css">
+
+  <!-- ... -->
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+
+  <!-- Barre de navigation -->
+  <nav class="navbar navbar-expand-xl navbar-dark blur-navbar fixed-top shadow">
+    <div class="container-fluid">
+      <!-- Logo et titre du site -->
+      <a class="navbar-brand text-white">Radio RWA</a>
+
+      <!-- Lecteur RWA -->
+      <div class="audio-player player-navbar">
+        <audio id="player0">
+          <source src="https://manager8.streamradio.fr:1665/stream" type="audio/mpeg">
+        </audio>
+        <button onclick="playPause('player0')" id="playPauseButton0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle"
+            viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            <path
+              d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
+          </svg>
+        </button>
+        <button onclick="stop('player0')" class="stop">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-stop-circle"
+            viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            <path
+              d="M5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3z" />
+          </svg>
+        </button>
+      </div>
+      <!-- FIN lecteur RWA -->
+
+      <!-- Bouton pour afficher le menu sur mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Contenu du menu -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#page-top">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-opacity-50" href="#tchat-videoLive">Tchat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-opacity-50" href="#agenda">Agenda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-opacity-50" href="#ziksDemande">Zik's à la demande</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-opacity-50" href="#emissions">Émissions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-opacity-50" href="#podcasts">Podcasts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-opacity-50" href="#equipe">Équipe</a>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Contact
+            </button>
+          </li>
+        </ul>
+
+        <!-- Icônes des réseaux sociaux -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.facebook.com/stephane.rwa" target="_blank">
+              <i class="bi bi-facebook text-primary"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.instagram.com/rwa.radio.web.aquitaine/" target="_blank">
+              <i class="bi bi-instagram text-primary"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/RadioRwa" target="_blank">
+              <i class="bi bi-twitter text-primary"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.youtube.com/channel/UCXdtNSwJr0NKCuf7D1Kz0Bg" target="_blank">
+              <i class="bi bi-youtube text-primary"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- ... -->
+
+  <!-- Contenu du header avec l'image de fond -->
+  <header class="bg_cover">
+    <img class="img-fluid" src="images/header.png" alt="Header">
+  </header>
+  <!-- ... -->
+
+  <main class="container-fluid">
+
+    <!-- Section pour le lecteur audio -->
+    <section class="playerRWA">
+      <div class="card mb-3 mx-auto zoom-card card-neon bg-secondary" style="max-width: 930px;">
+        <div class="row g-0">
+          <div class="col-lg-4">
+            <div style="width: 320px;">
+              <div class="sc-status-widget">
+                <div is="stream-status-widget" lang="fr" api-base="https://manager8.streamradio.fr:1650/api/v2"
+                  server-id="1" bgcolor="#0d0d0d" bgopacity="1" bgimage="" meta_font_size="16" meta_font_style="normal"
+                  meta_font_color="#f5f5f5" meta_opacity="1" progress_bar_color="#67a7b2"
+                  progress_bar_bg_color="#e1e1e1" progress_bar_height="25" progress_opacity="1"
+                  progress_font_color="#000000" progress_font_opacity="1"
+                  track_image_default="https://manager8.streamradio.fr:1650/media/tracks/default_track_img.png"
+                  track_image_size="100" vote_show="false" vote_buttons_color="#38808d"
+                  vote_results_font_color_neg="#ff0000" vote_results_font_color_pos="#00ff00"
+                  vote_results_font_size="14">
+                </div>
+              </div>
+            </div>
+            <link rel="stylesheet" type="text/css"
+              href="https://manager8.streamradio.fr:1650/media/static/css/current_track_widget/status_widget.css" />
+            <script type="text/javascript"
+              src="https://manager8.streamradio.fr:1650/media/static/js/current_track_widget/status_widget.js"></script>
+          </div>
+          <div class="col-lg-8">
+            <div class="card-body">
+              <h1 class="card-title neon-text"><img src="images/rwa-logo.png" alt="Logo de Radio RWA" width="80"> Radio
+                RWA</h1>
+              <p class="lead">"Basée dans la région Aquitaine, elle diffuse une sélection de titres <span
+                  class="fw-bold">Pop</span> et <span class="fw-bold">Rock</span> des deux dernières
+                années et de l'année en cours, tout en incluant occasionnellement des classiques POP et ROCK !"</p>
+              <p class="lead"><span class="badge bg-primary text-white">By Stéphane Henry (le boss)</span></p>
+
+              <!-- Lecteur RWA -->
+              <div class="audio-player mt-5">
+                <audio id="player0">
+                  <source src="https://manager8.streamradio.fr:1665/stream" type="audio/mpeg">
+                </audio>
+                <button onclick="playPause('player0')" id="playPauseButton0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-play-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path
+                      d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
+                  </svg>
+                </button>
+                <button onclick="stop('player0')" class="stop">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-stop-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path
+                      d="M5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3z" />
+                  </svg>
+                </button>
+                <div style="display: none;">
+                  <progress id="progress0" value="0" max="100" onclick="seek('player0', event)"></progress>
+                </div>
+              </div>
+              <!-- FIN lecteur RWA -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ... -->
+
+    <!-- Section pour le tchat et la vidéo live -->
+    <section id="tchat-videoLive">
+      <div class="row">
+        <div class="col-xl-5">
+          <div class="card mb-5 bg-secondary card-neon" style="min-height: 700px;">
+            <div class="card-body m-0 p-0">
+              <h3 class="neon-text ps-2"><i class="bi bi-chat text-info text-info"></i> Le t'chat</h3>
+              <div class="mt-3">
+                <iframe title="Le tchat" src="tchat/index.php" scrolling="no" height="600" width="100%"
+                  FRAMEBORDER="no"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-7">
+          <div class="card mb-5 bg-secondary card-neon" style="min-height: 700px;">
+            <div class="card-body m-0 p-0">
+              <h3 class="neon-text ps-2"><i class="bi bi-camera-video text-info"></i> La vidéo live !</h3>
+              <div class="mt-3">
+                <iframe width="100%" height="400"
+                  src="https://www.youtube.com/embed/live_stream?channel=UCXdtNSwJr0NKCuf7D1Kz0Bg"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+              <p class="card-text ps-2 pt-3"><i class="bi bi-lightbulb text-info"></i> "Utilisez le t'chat
+                pour engager une discussion en direct avec l'équipe et les auditeurs. <br>
+                Réagissez et agissez sur tous les sujets en faisant preuve de tact et de respect envers
+                autrui, car tout le monde n'a pas nécessairement le même point de vue que vous !"
+              </p>
+              <p class="card-text ps-2">
+                <i class="bi bi-info-circle text-info"></i> "L'inscription au tchat est obligatoire et gratuite.
+                Nous ne vendons ni n'échangeons vos données personnelles, sous aucun prétexte."
+              </p>
+              <p class="card-text ps-2"><i class="bi bi-youtube text-info"></i> La chaine Youtube est ici <a
+                  class="text-info" href="https://www.youtube.com/channel/UCXdtNSwJr0NKCuf7D1Kz0Bg">Radio RWA</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ... -->
+
+
+    <!-- Agenda des évènements -->
+    <section id="agenda">
+      <div class="row">
+        <h3 class="neon-text mt-5 mb-5"><i class="bi bi-calendar-week text-info"></i> Les agendas</h3>
+        <div class="col-lg-6">
+          <div class="card bg-secondary card-neon mb-5">
+            <img src="images/agenda/semaine.png" class="card-img-top" alt="Image">
+            <div class="card-header card-neon">
+              <div class="card-title">
+                <h3 class="neon-text"><i class="bi bi-calendar-week text-info"></i> Cette semaine</h3>
+              </div>
+            </div>
+            <div class="card-body mt-3">
+              <p class="lead">Découvrez dès maintenant l'agenda de la semaine, plein de nouveaux programmes,
+                artistes et initiatives passionnants sur Radio RWA ! Merci de rester fidèles à notre station !
+              </p>
+            </div>
+            <div class="card-footer text-center">
+              <button class="btn btn-primary btn-lg mt-5 mb-5" data-bs-toggle="collapse"
+                data-bs-target="#collapseCardLeft" aria-expanded="false" aria-controls="collapseCardLeft">Voir
+                l'agenda</button>
+            </div>
+            <div class="collapse" id="collapseCardLeft" style="width: 100%;">
+              <div class="card bg-secondary card-body">
+                <!-- Image de l'évènement -->
+                <p class="lead">
+                  <img class="img-fluid" src="images/agenda/agendasemaine.jpg" alt="" width="100%">
+                </p>
+                <!-- Vidéo de l'évènement -->
+                <p class="lead">
+                  <video width="100%" height="400" controls poster="images/rwa-logo.png">
+                    <source src="videos/agenda/videosemaine.mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la balise vidéo.
+                  </video>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card bg-secondary card-neon mb-5">
+            <img src="images/agenda/mois.png" class="card-img-top" alt="Image">
+            <div class="card-header card-neon">
+              <div class="card-title">
+                <h3 class="neon-text"><i class="bi bi-calendar-week text-info"></i> Ce mois-ci</h3>
+              </div>
+            </div>
+            <div class="card-body mt-3">
+              <p class="lead">Nous sommes ravis de vous présenter l'agenda du mois: des programmes inédits,
+                des artistes talentueux et des initiatives à suivre sur Radio RWA. Merci pour votre fidélité !
+              </p>
+            </div>
+            <div class="card-footer text-center">
+              <button class="btn btn-primary btn-lg mt-5 mb-5" data-bs-toggle="collapse"
+                data-bs-target="#collapseCardRight" aria-expanded="false" aria-controls="collapseCardRight">Voir
+                l'agenda</button>
+            </div>
+            <div class="collapse" id="collapseCardRight" style="width: 100%;">
+              <div class="card bg-secondary card-body">
+                <!-- Image de l'évènement -->
+                <p class="lead">
+                  <img class="img-fluid" src="images/agenda/agendamois.jpg" alt="" width="100%">
+                </p>
+                <!-- Vidéo de l'évènement -->
+                <p class="lead">
+                  <video width="100%" height="400" controls poster="images/rwa-logo.png">
+                    <source src="videos/agenda/videomois.mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la balise vidéo.
+                  </video>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ... -->
+
+
+    <!-- MUSIQUES A LA DEMANDE -->
+    <section id="ziksDemande">
+      <div class="card mb-5 mx-auto card-neon bg-secondary">
+        <div class="row g-0">
+
+          <div class="col-lg-4">
+            <img class="img-fluid" src="images/rwa-logo.png" alt="Logo de Radio RWA">
+          </div>
+
+          <div class="col-lg-8">
+            <div class="card-body">
+              <h3 class="card-title neon-text"><i class="bi bi-music-note-list text-info"></i> Ziks à la demande</h3>
+              <p class="lead mt-3 mb-3">"Osez créer votre propre programmation musicale,
+                laissez la musique vous transporter et devenez le programmateur de Radio RWA!
+                <br>Faites un pas vers l'audace musicale, créez vos playlists sur mesure, sans contrainte des genres
+                musicaux
+                que Radio RWA a rendu libre rien que pour vous. Envie d'un son hardrock puis juste derrière d'un bon rap
+                ? n'hésitez pas :)
+              </p>
+              <p class="lead">Assurez-vous d'être dans le bon créneau horaire <a href="#emissions">ici</a>.
+                Utilisez la barre de recherche, trouvez, validez et soyez patient votre programmation personnalisée va
+                bientôt passer à l'antenne !"
+              </p>
+              <p class="lead">En dehors des horaires prévus pour les musiques à la demande, vous pouvez toujours créer
+                votre programmation musicale qui sera diffusée dès que les créneaux seront à nouveau ouverts.</p>
+              <div class="d-flex justify-content-center mt-5">
+                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">
+                  Je veux programmer !
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Fenêtre modale -->
+      <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <!-- En-tête de la fenêtre modale -->
+            <div class="modal-header">
+              <h3 class="card-title text-dark"><i class="bi bi-music-note-list text-info"></i> Ziks à la demande</h3>
+              <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Contenu de la fenêtre modale (iframe) -->
+            <div class="modal-body">
+              <iframe src="ziks-demande.html" frameborder="0" width="100%" height="400"></iframe>
+            </div>
+
+            <!-- Pied de la fenêtre modale -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ... -->
+
+
+    <!-- HORAIRES EMISSIONS -->
+    <section id="emissions">
+      <div id="horaires">
+        <div class="col-lg-12">
+          <div class="single-accordion mt-5">
+            <div class="card-header">
+              <div class="card-title mb-4">
+                <h3 class="neon-text"><i class="bi bi-clock text-info"></i> Les émissions</h3>
+              </div>
+            </div>
+            <div class="accordion-rwa">
+              <div class="accordion" id="accordionTwo">
+                <div class="card">
+                  <div class="card-header" id="headingSix">
+                    <a id="1" href="#collapseSix" data-bs-toggle="collapse">Lundi</a>
+                  </div>
+                  <!-- card end -->
+                  <div id="collapseSix" class="collapse" data-bs-parent="#accordionTwo">
+                    <div class="card-body">
+
+                      <!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+                      <!-- ==================== LUNDI ==================== -->
+                      <!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block  px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Zik's à la demande</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: les auditeurs</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 00:00 - 08:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+
+                      <!-- CARD LA MATINALEE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> La matinale</h4>
+                              <p class="text px-4">Genre: Pop rock / Rock</p>
+                              <p class="text px-4">avec: Steff</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 08:00 - 10:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD LA MATINALE -->
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Zik's à la demande</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: les auditeurs</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 10:00 - 18:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+
+                      <!-- CARD START LES AFFREUX JOJOS-->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-mic text-info"></i> Les affreux Jojos</h4>
+                              <p class="text px-4">Genre: Talkshow / Hits / Pop rock</p>
+                              <p class="text px-4">avec: Les-affreux-jojos</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 18:00 - 19:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END LES AFFREUX JOJOS-->
+
+                      <!-- CARD START BRITISH CONNECTION -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-mic text-info"></i> British Connection</h4>
+                              <p class="text px-4">Genre: Rock / Pop rock</p>
+                              <p class="text px-4">avec: Philippe O'British'Co</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 19:00 - 21:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END BRITISH CONNECTION -->
+
+                      <!-- CARD START POP ROCK TIME -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-mic text-info"></i> Pop Rock Time</h4>
+                              <p class="text px-4">Genre: Rock / Pop rock</p>
+                              <p class="text px-4">avec: Jihem</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 21:00 - 22:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END POP ROCK TIME -->
+
+                      <!-- CARD START HAZARD'ROCK -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-mic text-info"></i> Hazard'Rock</h4>
+                              <p class="text px-4">Genre: Rock / Pop rock</p>
+                              <p class="text px-4">avec: Jean-Philippe</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 22:00 - 23:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END HAZARD'ROCK -->
+
+                      <!-- CARD START Metal Invasion Podcast -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Metal Invasion</h4>
+                              <p class="text px-4">Genre: Metal / Trash metal</p>
+                              <p class="text px-4">avec: Sidney</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 23:00 - 00:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END Metal Invasion Podcast -->
+                    </div>
+                  </div>
+                </div>
+                <!-- card end -->
+
+                <!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+                <!-- ==================== MARDI ==================== -->
+                <!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+                <div class="card">
+                  <div class="card-header" id="headingseven">
+                    <a id="2" class="collapsed" href="#collapseseven" data-bs-toggle="collapse">Mardi</a>
+                  </div>
+                  <div id="collapseseven" class="collapse" data-bs-parent="#accordionTwo">
+                    <div class="card-body">
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Zik's à la demande</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: les auditeurs</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 00:00 - 08:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+
+                      <!-- CARD LA MATINALEE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> La matinale</h4>
+                              <p class="text px-4">Genre: Pop rock / Rock</p>
+                              <p class="text px-4">avec: Steff</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 08:00 - 10:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD LA MATINALE -->
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Zik's à la demande</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: les auditeurs</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 10:00 - 18:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+
+                      <!-- CARD START LES AFFREUX JOJOS -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-mic text-info"></i> Les affreux Jojos</h4>
+                              <p class="text px-4">Genre: Talkshow / Hits / Pop rock</p>
+                              <p class="text px-4">avec: Les affreux jojos</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 18:00 - 19:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END LES AFFREUX JOJOS -->
+
+                      <!-- CARD START BODY'N SOUL -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-mic text-info"></i> Body'n soul</h4>
+                              <p class="text px-4">Genre: Dance / Soul</p>
+                              <p class="text px-4">avec: avec Fred</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 19:00 - 20:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END BODY'N SOUL -->
+
+                      <!-- CARD START TOUTE LA DANCE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-mic text-info"></i> Toute la Dance</h4>
+                              <p class="text px-4">Genre: Dance / Old dance</p>
+                              <p class="text px-4">avec: avec Fabien</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 20:00 - 21:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END TOUTE LA DANCE -->
+
+                      <!-- CARD START BACKSPIN -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-mic text-info"></i> Backspin</h4>
+                              <p class="text px-4">Genre: Hits / Dance / Old dance</p>
+                              <p class="text px-4">avec: avec Cristo and Co</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 21:00 - 23:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END BACKSPIN -->
+
+                       <!-- CARD START Dancefloor 2000 -->
+                       <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Dancefloor 2000</h4>
+                              <p class="text px-4">Genre: Hits / Dance 2000</p>
+                              <p class="text px-4">avec: Laurent Eflau</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 23:00 - 00:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END Dancefloor 2000 -->
+
+                    </div>
+                  </div>
+                </div>
+                <!-- card end -->
+
+                <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                <!-- ==================== MERCREDI ==================== -->
+                <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+                <div class="card">
+                  <div class="card-header" id="headingEight">
+                    <a id="3" class="collapsed" href="#collapseEight" data-bs-toggle="collapse">Mercredi</a>
+                  </div>
+                  <div id="collapseEight" class="collapse" data-bs-parent="#accordionTwo">
+                    <div class="card-body">
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Zik's à la demande</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: les auditeurs</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 00:00 - 17:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+
+
+                      <!-- CARD START HIT'S AND NEWS -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-mic text-info"></i> Hits and News</h4>
+                              <p class="text px-4">Genre: Hits / News</p>
+                              <p class="text px-4">avec: Teddy</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 17:00 - 18:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END HIT'S AND NEWS -->
+
+                      <!-- CARD START LES AFFREUX JOJOS -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-mic text-info"></i> Les affreux Jojos</h4>
+                              <p class="text px-4">Genre: Talkshow / Hits / Pop rock</p>
+                              <p class="text px-4">avec: Les-affreux-jojos</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 18:00 - 19:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END LES AFFREUX JOJOS -->
+
+                      <!-- CARD START EURODANCE 80 -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Euro Dance 80</h4>
+                              <p class="text px-4">Genre: Clubbing / Dance / Old dance</p>
+                              <p class="text px-4">avec: Jean-No</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 19:00 - 20:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END EURODANCE 80 -->
+
+                      <!-- CARD START BEFORE THE NIGHT -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-mic text-info"></i> Before the night</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: Steff et Niko
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 20:00 - 21:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END BEFORE THE NIGHT -->
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Extra club Latino</h4>
+                              <p class="text px-4">Genre: Hits / Dance</p>
+                              <p class="text px-4">avec: </p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 21:00 - 22:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Zik's à la demande</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: les auditeurs</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 22:00 - 00:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+                    </div>
+                  </div>
+                </div>
+                <!-- card end -->
+
+                <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                <!-- ==================== JEUDI ======================= -->
+                <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+                <div class="card">
+                  <div class="card-header" id="headingNine">
+                    <a id="4" class="collapsed" href="#collapseNine" data-bs-toggle="collapse">Jeudi</a>
+                  </div>
+                  <div id="collapseNine" class="collapse" data-bs-parent="#accordionTwo">
+                    <div class="card-body">
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Zik's à la demande</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: les auditeurs</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 00:00 - 08:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+
+                      <!-- CARD LA MATINALEE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> La matinale</h4>
+                              <p class="text px-4">Genre: Pop rock / Rock</p>
+                              <p class="text px-4">avec: Steff</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 08:00 - 10:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD LA MATINALE -->
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Zik's à la demande</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: les auditeurs</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 10:00 - 18:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+
+                      <!-- CARD START LES AFFREUX JOJOS -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-mic text-info"></i> Les affreux Jojos</h4>
+                              <p class="text px-4">Genre: Talkshow / Hits / Pop rock</p>
+                              <p class="text px-4">avec: Les-affreux-jojos</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 18:00 - 19:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END LES AFFREUX JOJOS -->
+
+                      <!-- CARD START TOP TONIC -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Top Tonic</h4>
+                              <p class="text px-4">Genre: Hits / Classement</p>
+                              <p class="text px-4">avec: Nicolas</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 19:00 - 20:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END TOP TONIC -->
+
+                      <!-- CARD START DS TAROT -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> DS Tarot</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock / Tirage tarot</p>
+                              <p class="text px-4">avec: Delphine</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 20:00 - 21:30</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END DS TAROT -->
+
+                      <!-- CARD START MOOV PARTY -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Moov Party</h4>
+                              <p class="text px-4">Genre: Hits / Dance</p>
+                              <p class="text px-4">avec: Steff</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 21:30 - 22:30</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END MOOV PARTY -->
+
+                      <!-- CARD START ELECTRO CLUB -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Electroclub</h4>
+                              <p class="text px-4">Genre: Mix / Dance / Old dance</p>
+                              <p class="text px-4">avec: Thierry Sorrinet</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 22:30 - 23:30</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END QUENTIN ELECTRO CLUB -->
+
+                    </div>
+                  </div>
+                </div>
+                <!-- card end -->
+
+                <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                <!-- ==================== VENDREDI ==================== -->
+                <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+                <div class="card">
+                  <div class="card-header" id="headingTen">
+                    <a id="5" class="collapsed" href="#collapseTen" data-bs-toggle="collapse">Vendredi</a>
+                  </div>
+                  <div id="collapseTen" class="collapse" data-bs-parent="#accordionTwo">
+                    <div class="card-body">
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Zik's à la demande</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: les auditeurs</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 00:00 - 08:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+
+                      <!-- CARD LA MATINALEE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> La matinale</h4>
+                              <p class="text px-4">Genre: Pop rock / Rock</p>
+                              <p class="text px-4">avec: Steff</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 08:00 - 10:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD LA MATINALE -->
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Zik's à la demande</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: les auditeurs</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 10:00 - 18:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+
+                      <!-- CARD START LES AFFREUX JOJOS -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-mic text-info"></i> Les affreux Jojos</h4>
+                              <p class="text px-4">Genre: Talkshow / Hits / Pop rock</p>
+                              <p class="text px-4">avec: Les-affreux-jojos</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 18:00 - 19:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END LES AFFREUX JOJOS -->
+
+                      <!-- CARD START Les Déconnecté(e)s -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Les Déconnecté(e)s</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock / Talk show</p>
+                              <p class="text px-4">avec: Steff, Niko, Serge</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 19:00 - 21:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END Les Déconnecté(e)s -->
+
+                      <!-- CARD START Rap Folie Funky -->
+                   <div class="card">
+                     <div class="row no-gutters">
+                       <div class="col">
+                         <div class="card-block px-2">
+                           <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Rap Folie Funky</h4>
+                           <p class="text px-4">Genre: Généraliste</p>
+                           <p class="text px-4">avec: Bertrand</p>
+                           <p class="text text-info fw-bold" style="font-size: 24px;"><i class="bi bi-clock text-info"></i> 21:00 - 22:00</p>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                    <!-- CARD END Rap Folie Funky -->
+
+                    <!-- CARD START Extra Club-->
+                   <div class="card">
+                    <div class="row no-gutters">
+                      <div class="col">
+                        <div class="card-block px-2">
+                          <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Extra Club</h4>
+                          <p class="text px-4">Genre: Dance-Club</p>
+                          <p class="text px-4">avec: Laurent Veix</p>
+                          <p class="text text-info fw-bold" style="font-size: 24px;"><i class="bi bi-clock text-info"></i> 22:00 - 23:00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                   <!-- CARD END Extra Club -->
+
+                      <!-- CARD START KILL MIX -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Kill Mix</h4>
+                              <p class="text px-4">Genre: Mix / Dance</p>
+                              <p class="text px-4">avec: Sébastien Kill</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 23:00 - 00:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END KILL MIX -->
+                    </div>
+                  </div>
+                </div>
+                <!-- card end -->
+
+                <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                <!-- ==================== SAMEDI ====================== -->
+                <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+                <div class="card">
+                  <div class="card-header" id="headingEleven">
+                    <a id="6" class="collapsed" href="#collapseEleven" data-bs-toggle="collapse">Samedi</a>
+                  </div>
+                  <div id="collapseEleven" class="collapse" data-bs-parent="#accordionTwo">
+                    <div class="card-body">
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Zik's à la demande</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: les auditeurs</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 00:00 - 14:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+
+                      <!-- CARD START LES AFFREUX JOJOS -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Les affreux jojos (best
+                                of)</h4>
+                              <p class="text px-4">Genre: Talkshow / Hits / Pop rock</p>
+                              <p class="text px-4">avec: les affreux Jojos</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 14:00 - 15:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END LES AFFREUX JOJOS -->
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Zik's à la demande</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: les auditeurs</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 15:00 - 19:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+
+                      <!-- CARD START DANCE SENSATION -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Dance sensation</h4>
+                              <p class="text px-4">Genre: Dance / Old dance</p>
+                              <p class="text px-4">avec: Steph Blind</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 19:00 - 20:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END DANCE SENSATION-->
+
+                      <!-- CARD START DANCE FEVER -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Dance fever</h4>
+                              <p class="text px-4">Genre: Dance / Old dance</p>
+                              <p class="text px-4">avec: Cristo and Co</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 20:00 - 22:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END DANCE FEVER -->
+
+                      <!-- CARD START WELCOME TO MY WORLD -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Welcome to my world</h4>
+                              <p class="text px-4">Genre: Mix / Dance / Electro</p>
+                              <p class="text px-4">avec: Dj Dja</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 22:00 - 00:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END WELCOME TO MY WORLD -->
+
+                    </div>
+                  </div>
+                </div>
+                <!-- card end -->
+
+                <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                <!-- ==================== DIMANCHE ==================== -->
+                <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+                <div class="card">
+                  <div class="card-header" id="headingTwelve">
+                    <a id="0" class="collapsed" href="#collapseTwelve" data-bs-toggle="collapse">Dimanche</a>
+                  </div>
+                  <div id="collapseTwelve" class="collapse" data-bs-parent="#accordionTwo">
+                    <div class="card-body">
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Zik's à la demande</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: les auditeurs</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 00:00 - 10:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+
+                      <!-- CARD START SUR UN AIR D'ACCORDÉON -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Sur un air d'accordéon
+                              </h4>
+                              <p class="text px-4">Genre: Accordéon / Musette</p>
+                              <p class="text px-4">avec: ...</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 09:00 - 10:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END SUR UN AIR D'ACCORDÉON -->
+
+                      <!-- CARD START JAZZ O MANIA -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> JazzOmania</h4>
+                              <p class="text px-4">Genre: Jazz / Old jazz</p>
+                              <p class="text px-4">avec: Stéphane Kochoyan</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 10:00 - 11:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END JAZZ O MANIA -->
+
+                      <!-- CARD START Seventies and Eighties -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Seventies and Eighties
+                              </h4>
+                              <p class="text px-4">Genre: Pop rock</p>
+                              <p class="text px-4">avec: Éric Coullet</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 11:00 - 12:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END Seventies and Eighties -->
+
+                      <!-- CARD START BIG CACTUS -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Big Cactus</h4>
+                              <p class="text px-4">Genre: Country</p>
+                              <p class="text px-4">avec: Country.fr</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 12:00 - 13:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END BIG CACTUS -->
+
+                      <!-- CARD START FAN DE FUNK -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Fan de funk</h4>
+                              <p class="text px-4">Genre: Funk / Old funk</p>
+                              <p class="text px-4">avec: Eric NC</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 13:00 - 15:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END FAN DE FUNK -->
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Zik's à la demande</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: les auditeurs</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 15:00 - 17:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+
+                       <!-- CARD START Groowy Sound -->
+                       <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Groowy Sound</h4>
+                              <p class="text px-4">Genre: Soul / Funk</p>
+                              <p class="text px-4">avec: Captain Boogie</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 17:00 - 18:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END Groowy Sound  -->
+
+                      <!-- CARD START PULL IT UP -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Pull it up</h4>
+                              <p class="text px-4">Genre: Reggae / Old reggae</p>
+                              <p class="text px-4">avec: Faya Gong</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 18:00 - 20:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END PULL IT UP -->
+
+                      <!-- CARD FREQUENCE TROPIQUE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Fréquence tropique</h4>
+                              <p class="text px-4">Genre: Zouk / Afro</p>
+                              <p class="text px-4">avec: harry Lavital</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 20:00 - 22:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END FREQUENCE TROPIQUE -->
+
+                      <!-- CARD START BBC Rock -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> BCC Rock</h4>
+                              <p class="text px-4">Genre: Rock</p>
+                              <p class="text px-4">avec: Johnny Da Piedade</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 22:00 - 23:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END BBC Rock -->
+
+                      <!-- CARD START ZIK'S A LA DEMANDE -->
+                      <div class="card">
+                        <div class="row no-gutters">
+                          <div class="col">
+                            <div class="card-block px-2">
+                              <h4 class="card-title"><i class="bi bi-headphones text-info"></i> Zik's à la demande</h4>
+                              <p class="text px-4">Genre: Hits / Pop rock</p>
+                              <p class="text px-4">avec: les auditeurs</p>
+                              <p class="text text-info fw-bold" style="font-size: 24px;"><i
+                                  class="bi bi-clock text-info"></i> 23:00 - 00:00</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- CARD END ZIK'S A LA DEMANDE -->
+
+                    </div>
+                  </div>
+                </div>
+                <!-- card end -->
+              </div>
+            </div>
+            <!-- card générale end -->
+          </div>
+          <!-- accordion style one end -->
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- FIN DES HORAIRES EMISSIONS -->
+
+
+    <!-- LES PODCASTS -->
+    <section id="podcasts" class="container bg-secondary card-neon mt-sm-3 mt-md-4">
+      <h3 class="h1 neon-text"><i class="bi bi-music-note-list text-info"></i> Les podcasts</h3>
+      <p class="pb-3 pb-md-4 mb-0 mb-sm-2 mb-lg-3">Retoruvez tous les podcasts de la semaine</p>
+      <div class="row align-items-lg-center">
+        <!-- Accordion -->
+        <div class="col-md-6 col-lg-5 pb-2 pb-lg-0 mb-4 mb-md-0">
+          <div class="accordion" id="podcasts">
+            <!-- Element 1 -->
+            <div class="accordion-item border-dark">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed bg-primary-dark text-white" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#lesaffreuxjojos" aria-expanded="false"
+                  aria-controls="lesaffreuxjojos"><i class="bi bi-mic text-info"></i> Les Affreux Jojos</button>
+              </h3>
+              <div id="lesaffreuxjojos" class="accordion-collapse collapse" data-bs-parent="#podcasts">
+                <div class="accordion-body card-block-podcasts">
+                  <!-- Lecteur MP3 -->
+                  <div class="audio-player zoom-card">
+                    <audio id="player1">
+                      <source src="audios/podcasts/lesaffreuxjojos.mp3" type="audio/mpeg">
+                    </audio>
+                    <button onclick="playPause('player1')" id="playPauseButton1">Play | Pause</button>
+                    <button onclick="stop('player1')" class="stop">Stop</button>
+                    <progress id="progress1" value="0" max="100" onclick="seek('player1', event)"></progress>
+                  </div>
+                  <!-- FIN lecteur MP3 -->
+                </div>
+              </div>
+            </div>
+            <!-- Element 2 -->
+            <div class="accordion-item border-dark">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed bg-primary-dark text-white" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#hazardrock" aria-expanded="false"
+                  aria-controls="hazardrock"><i class="bi bi-mic text-info"></i> Hazard'Rock</button>
+              </h3>
+              <div id="hazardrock" class="accordion-collapse collapse" data-bs-parent="#podcasts">
+                <div class="accordion-body card-block-podcasts">
+                  <!-- Lecteur MP3 -->
+                  <div class="audio-player zoom-card">
+                    <audio id="player2">
+                      <source src="audios/podcasts/hazardrock.mp3" type="audio/mpeg">
+                    </audio>
+                    <button onclick="playPause('player2')" id="playPauseButton2">Play | Pause</button>
+                    <button onclick="stop('player2')" class="stop">Stop</button>
+                    <progress id="progress2" value="0" max="100" onclick="seek('player2', event)"></progress>
+                  </div>
+                  <!-- FIN lecteur MP3 -->
+                </div>
+              </div>
+            </div>
+            <!-- Element 3 -->
+            <div class="accordion-item border-dark">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed bg-primary-dark text-white" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#beforethenight" aria-expanded="false"
+                  aria-controls="beforethenight"><i class="bi bi-mic text-info"></i> Before The Night</button>
+              </h3>
+              <div id="beforethenight" class="accordion-collapse collapse" data-bs-parent="#podcasts">
+                <div class="accordion-body card-block-podcasts">
+                  <!-- Lecteur MP3 -->
+                  <div class="audio-player zoom-card">
+                    <audio id="player3">
+                      <source src="audios/podcasts/beforethenigh.mp3" type="audio/mpeg">
+                    </audio>
+                    <button onclick="playPause('player3')" id="playPauseButton3">Play | Pause</button>
+                    <button onclick="stop('player3')" class="stop">Stop</button>
+                    <progress id="progress3" value="0" max="100" onclick="seek('player3', event)"></progress>
+                  </div>
+                  <!-- FIN lecteur MP3 -->
+                </div>
+              </div>
+            </div>
+            <!-- Element 4 -->
+            <div class="accordion-item border-dark">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed bg-primary-dark text-white" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#wtmw" aria-expanded="false" aria-controls="wtmw"><i
+                    class="bi bi-mic text-info"></i> Welcome To My World</button>
+              </h3>
+              <div id="wtmw" class="accordion-collapse collapse" data-bs-parent="#podcasts">
+                <div class="accordion-body card-block-podcasts">
+                  <!-- Lecteur MP3 -->
+                  <div class="audio-player zoom-card mb-3">
+                    <audio id="player4">
+                      <source src="audios/podcasts/WtmwA.mp3" type="audio/mpeg">
+                    </audio>
+                    <button onclick="playPause('player4')" id="playPauseButton4">Play | Pause</button>
+                    <button onclick="stop('player4')" class="stop">Stop</button>
+                    <progress id="progress4" value="0" max="100" onclick="seek('player4', event)"></progress>
+                  </div>
+
+                  <div class="audio-player zoom-card">
+                    <audio id="player5">
+                      <source src="audios/podcasts/WtmwB.mp3" type="audio/mpeg">
+                    </audio>
+                    <button onclick="playPause('player5')" id="playPauseButton5">Play | Pause</button>
+                    <button onclick="stop('player5')" class="stop">Stop</button>
+                    <progress id="progress5" value="0" max="100" onclick="seek('player5', event)"></progress>
+                  </div>
+                  <!-- FIN lecteur MP3 -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Binded images -->
+        <div class="col-md-6 col-lg-7 col-xl-6 offset-xl-1">
+          <div class="ps-lg-4 ps-xl-0">
+            <div class="binded-content">
+              <div class="podcast-image d-none" id="lesaffreuxjojos-img"><img class="rounded-5"
+                  src="images/podcasts/lesaffreuxjojos.jpg" alt="Image 1"></div>
+              <div class="podcast-image d-none" id="hazardrock-img"><img class="rounded-5"
+                  src="images/podcasts/hazardrock.jpg" alt="Image 2"></div>
+              <div class="podcast-image d-none" id="beforethenight-img"><img class="rounded-5"
+                  src="images/podcasts/beforethenight.jpg" alt="Image 3"></div>
+              <div class="podcast-image d-none" id="wtmw-img"><img class="rounded-5" src="images/podcasts/wtmw.jpg"
+                  alt="Image 4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      // Script pour gérer le changement d'image lorsque les boutons d'accordéon sont cliqués
+      const accordionButtons = document.querySelectorAll('[data-bs-toggle="collapse"]');
+      const bindedItems = document.querySelectorAll('.podcast-image');
+
+      accordionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          bindedItems.forEach(item => {
+            item.classList.add('d-none');
+          });
+          const targetImageId = button.getAttribute('data-bs-target');
+          const targetImage = document.querySelector(targetImageId + '-img');
+          if (targetImage) {
+            targetImage.classList.remove('d-none');
+          }
+        });
+      });
+    </script>
+    <!-- FIN DES PODCASTS -->
+
+
+    <!-- ALBUM PHOTOS DE L'EQUIPE -->
+    <section id="equipe">
+      <style media="screen">
+        .img-equipe {
+          box-shadow: #67a7b2 0px 25px 20px -20px;
+        }
+      </style>
+      <div id="equipe" class="container">
+        <h3 class="my-5 neon-text"><i class="bi bi-emoji-sunglasses-fill text-info"></i> Équipe de la radio</h3>
+        <div class="row">
+          <!-- Steff -->
+          <div class="col-md-4 mb-4">
+            <img src="images/equipe/steff.png" alt="Steff" class="img-fluid img-equipe">
+            <p class="lead mt-2"><span class="badge bg-primary text-white">Steff - Le boss</span></p>
+          </div>
+
+          <!-- Teddy -->
+          <div class="col-md-4 mb-4">
+            <img src="images/equipe/Teddy.jpg" alt="Teddy" class="img-fluid img-equipe">
+            <p class="lead mt-2"><span class="badge bg-primary text-white">Teddy</span></p>
+          </div>
+
+          <!-- Jean-Philippe -->
+          <div class="col-md-4 mb-4">
+            <img src="images/equipe/jp.jpg" alt="JP" class="img-fluid img-equipe">
+            <p class="lead mt-2"><span class="badge bg-primary text-white">Jean-Philippe</span></p>
+          </div>
+
+          <!-- Delphine -->
+          <div class="col-md-4 mb-4">
+            <img src="images/equipe/delphine.png" alt="Delphine" class="img-fluid img-equipe">
+            <p class="lead mt-2"><span class="badge bg-primary text-white">Delphine</span></p>
+          </div>
+
+          <!-- Niko -->
+          <div class="col-md-4 mb-4">
+            <img src="images/equipe/niko.jpg" alt="Niko" class="img-fluid img-equipe">
+            <p class="lead mt-2"><span class="badge bg-primary text-white">Niko</span></p>
+          </div>
+
+          <!-- Dja -->
+          <div class="col-md-4 mb-4">
+            <img src="images/equipe/dja.jpg" alt="Dja" class="img-fluid img-equipe">
+            <p class="lead mt-2"><span class="badge bg-primary text-white">Dja</span></p>
+          </div>
+
+          <!-- Serge -->
+          <div class="col-md-4 mb-4">
+            <img src="images/equipe/serge.jpg" alt="Serge" class="img-fluid img-equipe">
+            <p class="lead mt-2"><span class="badge bg-primary text-white">Serge</span></p>
+          </div>
+
+          <!-- Philippe O'British'Co -->
+          <div class="col-md-4 mb-4">
+            <img src="images/equipe/philippe-o-british-co.jpg" alt="Philippe O'British'Co" class="img-fluid img-equipe">
+            <p class="lead mt-2"><span class="badge bg-primary text-white">Philippe O'British'Co</span></p>
+          </div>
+
+          <!-- Jihem -->
+          <div class="col-md-4 mb-4">
+            <img src="images/equipe/jihem.jpg" alt="Jihem" class="img-fluid img-equipe">
+            <p class="lead mt-2"><span class="badge bg-primary text-white">Jihem</span></p>
+          </div>
+
+          <!-- Fabien -->
+          <div class="col-md-4 mb-4">
+            <img src="images/equipe/fabien.jpg" alt="Fabien" class="img-fluid img-equipe">
+            <p class="lead mt-2"><span class="badge bg-primary text-white">Fabien</span></p>
+          </div>
+
+          <!-- Thierry -->
+          <div class="col-md-4 mb-4">
+            <img src="images/equipe/thierry.jpg" alt="Thierry" class="img-fluid img-equipe">
+            <p class="lead mt-2"><span class="badge bg-primary text-white">Thierry</span></p>
+          </div>
+
+          <!-- Sébastien Kill -->
+          <div class="col-md-4 mb-4">
+            <img src="images/equipe/sebastien-kill.jpg" alt="Sébastien Kill" class="img-fluid img-equipe">
+            <p class="lead mt-2"><span class="badge bg-primary text-white">Sébastien Kill</span></p>
+          </div>
+
+          <!-- Faya Gong -->
+          <div class="col-md-4 mb-4">
+            <img src="images/equipe/faya-gong.jpg" alt="Faya Gong" class="img-fluid img-equipe">
+            <p class="lead mt-2"><span class="badge bg-primary text-white">Faya Gong</span></p>
+          </div>
+
+          <!-- Eric NC -->
+          <div class="col-md-4 mb-4">
+            <img src="images/equipe/eric-nc.jpg" alt="Eric NC" class="img-fluid img-equipe">
+            <p class="lead mt-2"><span class="badge bg-primary text-white">Eric NC</span></p>
+          </div>
+
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- FIN DE L'ALBUM PHOTOS DE L'EQUIPE -->
+
+
+    <!-- Modal contact -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Radio RWA - Contact</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <iframe name="Contact" src="contact.php" scrolling="no" height="600" width="100%" FRAMEBORDER="no"></iframe>
+       </div>
+        <div class="alert alert-success d-none" role="alert" id="confirmationMessage">
+          Votre formulaire a été envoyé avec succès !
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="logo">
+        <!-- Remplacez l'URL par le chemin vers votre logo -->
+        <img src="images/rwa-logo.png" alt="Logo RWA">
+      </div>
+      <div class="copyright">
+        &copy; 2023 rwa.fr
+      </div>
+      <div class="social-icons">
+        <!-- Remplacez les liens par les liens vers vos comptes de réseaux sociaux -->
+        <a href="#" class="social-icon"><i class="bi bi-facebook text-primary"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-instagram text-primary"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-twitter text-primary"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-youtube text-primary"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- ... -->
+
+  <!-- Liens vers les fichiers JS  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="js/rwa.js" charset="utf-8"></script>
+</body>
+
+</html>
